@@ -9,20 +9,16 @@ import time
 
 from datetime import datetime
 
-PATH = r"C:\Users\chiay\Downloads\Compressed\chromedriver_win32_2/chromedriver.exe"
-
-username_1 = "TP050735"
-password_1 = "TP050735"
-username_2 = "TP051139"
-password_2 = "Nagalsw030300?"
+username_1 = "TP051131"
+password_1 = "C2rsd000D987!"
+username_2 = "TP050848"
+password_2 = "JAS__0303mine"
 
 code = input("Enter the current OTP Code: ")
-	
-
 
 def driver1():
 
-    driver = webdriver.Chrome(PATH)
+    driver = webdriver.Chrome(executable_path="/usr/lib/chromium-browser/chromedriver")
     
     driver.get("https://apspace.apu.edu.my/tabs/dashboard")
            
@@ -43,17 +39,13 @@ def driver1():
     
     login_button.click()
     
-    
     #driver.implicitly_wait(5)
     driver.implicitly_wait(10)
-    
     
     ##### read username , tp , course
     
     name = driver.find_element_by_xpath("/html/body/app-root/ion-app/ion-router-outlet/app-tabs/ion-content/ion-tabs/div[1]/ion-router-outlet/app-dashboard/ion-content/div/ion-grid/ion-row/ion-col[1]/ion-card[2]/ion-card-header/ion-card-title")
     # tp_number = driver.find_element_by_xpath("/html/body/app-root/ion-app/ion-router-outlet/app-tabs/ion-content/ion-tabs/div[1]/ion-router-outlet/app-dashboard/ion-content/div/ion-grid/ion-row/ion-col[1]/ion-card[2]/ion-card-header/ion-card-subtitle")
-    
-    
     
     attendance_page = driver.find_element_by_xpath("/html/body/app-root/ion-app/ion-router-outlet/app-tabs/ion-content/ion-tabs/div[1]/ion-router-outlet/app-dashboard/ion-content/div/ion-grid/ion-row/ion-col[1]/ion-card[3]/ion-card-content/ion-grid/ion-row/ion-col[1]/ion-button")
     
@@ -81,7 +73,7 @@ def driver1():
 
 def driver2():
 
-    driver = webdriver.Chrome(PATH)
+    driver = webdriver.Chrome(executable_path="/usr/lib/chromium-browser/chromedriver")
     
     driver.get("https://apspace.apu.edu.my/tabs/dashboard")
            
@@ -102,17 +94,13 @@ def driver2():
     
     login_button.click()
     
-    
     #driver.implicitly_wait(5)
     driver.implicitly_wait(10)
-    
     
     ##### read username , tp , course
     
     name = driver.find_element_by_xpath("/html/body/app-root/ion-app/ion-router-outlet/app-tabs/ion-content/ion-tabs/div[1]/ion-router-outlet/app-dashboard/ion-content/div/ion-grid/ion-row/ion-col[1]/ion-card[2]/ion-card-header/ion-card-title")
     # tp_number = driver.find_element_by_xpath("/html/body/app-root/ion-app/ion-router-outlet/app-tabs/ion-content/ion-tabs/div[1]/ion-router-outlet/app-dashboard/ion-content/div/ion-grid/ion-row/ion-col[1]/ion-card[2]/ion-card-header/ion-card-subtitle")
-    
-    
     
     attendance_page = driver.find_element_by_xpath("/html/body/app-root/ion-app/ion-router-outlet/app-tabs/ion-content/ion-tabs/div[1]/ion-router-outlet/app-dashboard/ion-content/div/ion-grid/ion-row/ion-col[1]/ion-card[3]/ion-card-content/ion-grid/ion-row/ion-col[1]/ion-button")
     
@@ -133,21 +121,10 @@ def driver2():
     
     print("Time :", current_time)
     print("Name :", name.text)
-    print("Username :", username_1)
+    print("Username :", username_2)
     print("Message :", message)
     
     driver.quit()
 
-
 driver1()
 driver2()
-
-
-
-
-
-
-
-
-
-
